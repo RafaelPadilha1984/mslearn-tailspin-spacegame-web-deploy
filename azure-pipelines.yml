@@ -84,9 +84,8 @@ stages:
           - download: current
             artifact: drop
           - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'your-subscription'
+              azureSubscription: 'Assinatura do Visual Studio Enterprise – MPN(239c2f9f-09d3-4260-abef-755b5453b034)'
               appType: 'webAppLinux'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
